@@ -1,6 +1,6 @@
 :root {
-  --primary: rgb(255, 0, 0);
-  --bg: #010101;
+  --primary: #ff08ff ;
+  --bg: #595959;
 }
 
 * {
@@ -29,7 +29,7 @@ body {
   align-items: center;
   padding: 1.4rem 7%;
   background-color: rgba(1, 1, 1, 0.8);
-  border-bottom: 1px solid #513c28;
+  border-bottom: 1px solid #ff08ff;
   position: fixed;
   top: 0;
   left: 0;
@@ -66,6 +66,7 @@ body {
   border-bottom: 0.1rem solid var(--primary);
   transform: scaleX(0);
   transition: 0.2s linear;
+  box-shadow: 7px 7px 22px rgb(255, 0, 217);
 }
 
 .navbar .navbar-nav a:hover::after {
@@ -90,7 +91,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("../img/galeri.jpg");
+  background-image: url("../img/portal.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -185,14 +186,14 @@ body {
 }
 
 .about .row .content h3 {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   margin-bottom: 1rem;
 }
 
 .about .row .content p {
   margin-bottom: 0.8rem;
-  font-size: 1.3rem;
-  font-weight: 100;
+  font-size: 1.5rem;
+  font-weight: 300;
   line-height: 1.6;
 }
 
@@ -206,7 +207,7 @@ body {
   text-align: center;
   max-width: 30rem;
   margin: auto;
-  font-weight: 100;
+  font-size: 1.3rem;
   line-height: 1.6;
 }
 
@@ -222,10 +223,18 @@ body {
   padding-bottom: 4rem;
   font-size: 1.5rem;
 }
+.menu .row .menu-card .link-inst {
+  font-size: 1.8rem;
+  font-weight: 550;
+  color: var(--primary);
+}
 
-.menu .row .menu-card img {
+.menu .row .menu-card span {
+  color: var(--primary);
+}
+.menu .row .menu-card  img {
   border-radius: 10%;
-  width: 60%;
+  width: 25%;
 }
 
 .menu .row .menu-card .menu-card-title {
@@ -233,50 +242,21 @@ body {
 }
 
 /* contact section */
-.contact .row {
-  display: flex;
-  margin-top: 2rem;
-  background-color: #222;
+.menu span {
+  font-weight: 900;
+  color: var(--primary);
 }
 
-.contact .row .map {
-  flex: 1 1 45rem;
-  width: 100%;
-  object-fit: cover;
-}
-
-.contact .row form {
-  flex: 1 1 45rem;
-  padding: 5rem 2rem;
-  text-align: center;
-}
-
-.contact .row form .input-group {
-  display: flex;
+/* card-uas */
+.card-uas {
   align-items: center;
-  margin-top: 2rem;
-  background-color: var(--bg);
-  border: 1px solid #eeee;
-  padding-left: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
-.contact .row form .input-group input {
-  width: 100%;
-  padding: 2rem;
-  font-size: 1.7rem;
-  background: none;
-  color: #ffff;
-}
 
-.contact .row form .btn {
-  margin-top: 3rem;
-  display: inline-block;
-  padding: 1rem 3rem;
-  font-size: 1.7rem;
-  color: #ffff;
-  background-color: var(--primary);
-  cursor: pointer;
-}
+
+
 
 /* Footer */
 footer {
@@ -404,11 +384,17 @@ footer .credit a {
   .contact .row form {
     padding-top: 0;
   }
+  .img-uas {
+    width: 80%;
+   }
 }
 
 /* Mobile Phone */
 @media (max-width: 450px) {
   html {
     font-size: 55%;
+  }
+  .img-uas {
+   width: 80%;
   }
 }
